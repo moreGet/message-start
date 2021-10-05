@@ -36,6 +36,23 @@
 
         <hr class="my-4">
 
+        <div>판매 여부</div>
+        <div>
+            <!-- Spring MVC의 기능으로 언더 스코어 _open으로
+                 open checkbox가 체크가 안되어 있을 경우 null이 아닌 false로 전송 -->
+<!--            <div class="form-check">-->
+<!--                <input type="checkbox" id="open" name="open" class="form-check-input">-->
+<!--                <input type="hidden" name="_open" value="on"> &lt;!&ndash; 히든 필드 추가 &ndash;&gt;-->
+<!--                <label for="open" class="form-check-label">판매 오픈</label>-->
+<!--            </div>-->
+
+            <!-- hidden 필드를 th:field="*{open}"가 자동으로 삽입 해줌 -->
+            <div class="form-check">
+                <input type="checkbox" id="open" th:field="*{open}" class="form-check-input">
+                <label for="open" class="form-check-label">판매 오픈</label>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col">
                 <button class="w-100 btn btn-primary btn-lg" type="submit">상품 등록</button>

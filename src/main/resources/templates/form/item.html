@@ -38,6 +38,15 @@
 
     <hr class="my-4">
 
+    <div>판매 여부</div>
+    <div>
+        <!-- th:field가 object의 checked 값 까지 판단하여 checkbox의 상태를 자동 변경 -->
+        <div class="form-check">
+            <input type="checkbox" id="open" th:field="${item.open}" class="form-check-input" disabled>
+            <label for="open" class="form-check-label">판매 오픈</label>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col">
             <button class="w-100 btn btn-primary btn-lg"
